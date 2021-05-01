@@ -1,5 +1,5 @@
 name: ripple_button
-description: A Ripple Button
+description: A fully customizable button with material ripple effect. Easy to use having some pre-defined button types.
 repository: https://github.com/lcsvcn/ripple_button.git
 homepage: https://github.com/lcsvcn/ripple_button.git
 version: 1.0.0
