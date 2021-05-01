@@ -4,11 +4,9 @@ class RippleButtonStyle {
   final RippleButtonColor color;
   final double elevation;
   final double height;
-  final TextStyle? textStyle;
   final RippleButtonBorder border;
 
   const RippleButtonStyle({
-    this.textStyle,
     this.color = const RippleButtonColor(),
     this.height = 40,
     this.elevation = 0.0,
