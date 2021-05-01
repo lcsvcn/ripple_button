@@ -8,7 +8,7 @@ class RippleButton extends StatelessWidget {
   final String text;
   final Function() onPressed;
   final EdgeInsets padding;
-  final RippleButtonType? type;
+  final RippleButtonType type;
   final RippleButtonStyle style;
   final TextStyle? textStyle;
 
@@ -17,7 +17,7 @@ class RippleButton extends StatelessWidget {
     required this.onPressed,
     this.textStyle,
     this.padding = EdgeInsets.zero,
-    this.type,
+    this.type = RippleButtonType.NONE,
     this.style = const RippleButtonStyle(),
   });
 
