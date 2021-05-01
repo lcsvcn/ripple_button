@@ -1,0 +1,19 @@
+name: ripple_button
+description: A Ripple Button
+repository: https://github.com/lcsvcn/ripple_button.git
+homepage: https://github.com/lcsvcn/ripple_button.git
+version: 1.0.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
