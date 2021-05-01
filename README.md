@@ -1,4 +1,4 @@
-# Smart Alert Dialog 
+# Ripple Button
 
 [![Pub Version](https://img.shields.io/pub/v/ripple_button)](https://pub.dev/packages/ripple_button)
 
