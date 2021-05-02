@@ -20,12 +20,13 @@ class RippleButton extends StatelessWidget {
   /// [padding]  expects a [EdgeInsets]
   /// This will change the padding of button to other widgets
   ///
-  ///  [default] value is EdgeInsets.zero (no padding)
+  ///  [default] value is [EdgeInsets.zero] (no padding)
   final EdgeInsets padding;
 
-  /// [type] expects a [RippleButtonType]
-  /// This will change the padding of the Ripple Button to other widgets
-  ///  [default] value is [RippleButtonType.none] (no padding)
+  /// This are pre-config designs for the ripple button
+  /// This is optional, if not set
+  /// The widget will use your design for the button
+  ///  [default] value is [RippleButtonType.none] (set your own custom design)
   final RippleButtonType type;
 
   /// [style] expects a [RippleButtonStyle]
@@ -35,15 +36,9 @@ class RippleButton extends StatelessWidget {
   /// [default] value is [RippleButtonStyle())]
   final RippleButtonStyle style;
 
-  /// [style] expects a [TextStyle]
-  /// This will change the style from the [text]
-  /// [default] value is null (default text style)
-  final TextStyle? textStyle;
-
   RippleButton({
     required this.text,
     required this.onPressed,
-    this.textStyle,
     this.padding = EdgeInsets.zero,
     this.type = RippleButtonType.NONE,
     this.style = const RippleButtonStyle(),
@@ -52,7 +47,7 @@ class RippleButton extends StatelessWidget {
   _selectButtonType() {
     final textWidget = Text(
       text,
-      style: textStyle,
+      style: RippleButtonStyle().text,
     );
 
     switch (type) {

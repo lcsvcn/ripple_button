@@ -5,7 +5,6 @@ import 'package:ripple_button/buttons/custom.dart';
 import 'package:ripple_button/models/ripple_button_style.dart';
 
 class WhiteTranslucentRippleButton extends StatelessWidget {
-  /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
   final String text;

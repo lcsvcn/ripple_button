@@ -91,9 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: RippleButtonColor(
                     background: Colors.red,
                   ),
-                ),
-                textStyle: TextStyle(
-                  color: Colors.white,
+                  text: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
                 onPressed: () => {_showFlushbar("Clicked Custom Button")},
               ),
