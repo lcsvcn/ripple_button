@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class RippleButtonStyle {
   /// [color] expects a [RippleButtonColor]
-  /// This will change the color of the ripple button
+  /// This will change the color to the ripple button
   final RippleButtonColor color;
 
   /// [elevation] expects a [double]
-  /// This will change the elevation of the ripple button
+  /// This will change the elevation to the ripple button
   /// [default] value is no border
   final double elevation;
 
   /// [height] expects a [double]
-  /// This will change the height of the ripple button
+  /// This will change the height to the ripple button
   /// [default] value is no border
   final double height;
 
