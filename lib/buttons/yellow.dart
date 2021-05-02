@@ -18,9 +18,23 @@ class YellowRippleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomRippleButton(
-      style: RippleButtonStyle(),
+      style: RippleButtonStyle(
+        color: RippleButtonColor(
+          background: Color(0xFFFFC800),
+        ),
+        border: RippleButtonBorder(
+          radius: BorderRadius.circular(30),
+        ),
+      ),
       onPressed: onPressed,
-      child: Text(text),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 16,
+          fontWeight: FontWeight.w900,
+        ),
+      ),
     );
   }
 }

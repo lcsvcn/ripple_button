@@ -19,12 +19,25 @@ class BlueTranslucentRippleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomRippleButton(
-      style: RippleButtonStyle(),
+      style: RippleButtonStyle(
+        color: RippleButtonColor(
+          background: Colors.transparent,
+        ),
+        border: RippleButtonBorder(
+          radius: BorderRadius.circular(30),
+          side: BorderSide(
+            color: Color(0xFF003FA2),
+            width: 2,
+          ),
+        ),
+      ),
       onPressed: onPressed,
       child: Text(
         text,
         style: TextStyle(
-          color: Colors.black,
+          color: Color(0xFF003FA2),
+          fontSize: 16,
+          fontWeight: FontWeight.w900,
         ),
       ),
     );

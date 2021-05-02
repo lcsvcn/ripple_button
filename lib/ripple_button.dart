@@ -1,12 +1,13 @@
 library ripple_button;
 
 import 'package:flutter/material.dart';
-import 'package:ripple_button/models/ripple_button_type.dart';
 import 'package:ripple_button/models/ripple_button_style.dart';
 import 'package:ripple_button/buttons/custom.dart';
 import 'package:ripple_button/buttons/yellow.dart';
 import 'package:ripple_button/buttons/blue_translucent.dart';
 import 'package:ripple_button/buttons/white_translucent.dart';
+
+part 'package:ripple_button/models/ripple_button_type.dart';
 
 class RippleButton extends StatelessWidget {
   /// [text] expects a [String]
