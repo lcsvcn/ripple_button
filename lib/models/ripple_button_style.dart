@@ -50,7 +50,7 @@ class RippleButtonColor {
   final Color background;
 
   /// [foreground] expects a [Color]
-  /// This will change the background color from the button
+  /// This will change the foreground color from the button
   final Color foreground;
 
   /// [shadow] expects a [Color]
