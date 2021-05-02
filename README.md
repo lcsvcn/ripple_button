@@ -6,6 +6,7 @@
 A fully customizable button with material ripple effect. Easy to use having some pre-defined button types.
 
 Here is the example screenshot:
+
 <img src="https://user-images.githubusercontent.com/6011385/116829511-6f80bd80-ab7a-11eb-92c6-bcf207a55bca.png"  width="178.75" height="366.75">
 
 ## Props
