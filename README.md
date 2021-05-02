@@ -80,6 +80,26 @@ This will add a border to the ripple button
 
 propType: `double`
 
+## RippleButtonColor
+
+#### `background`
+ 
+This will change the background color from the button
+
+propType: `Color`
+
+#### `foreground`
+
+This will change the foreground color from the button
+
+propType: `Color`
+
+#### `shadow`
+
+This will change the shadow color from the button
+
+propType: `Color`
+
 ## RippleButtonType
 
  **YELLOW:**
