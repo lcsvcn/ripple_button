@@ -1,4 +1,4 @@
-## 2.0.3
+## 2.0.4
 * Added more to customization to default button types
 
 ## 2.0.3
