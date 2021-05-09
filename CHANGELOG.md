@@ -1,4 +1,7 @@
 ## 2.0.3
+* Added more to customization to default button types
+
+## 2.0.3
 * Added width to RippleButtonStyles
 
 ## 2.0.2
