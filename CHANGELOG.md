@@ -1,3 +1,6 @@
+## 2.1.1
+* Added dart comments
+
 ## 2.1.0
 * Added new button type: AMBER!
 
