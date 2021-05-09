@@ -16,7 +16,7 @@ class CustomRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
-  /// [child] expects a text to be inside the button
+  /// [child] expects a widget to be inside the button
   final Text child;
 
   CustomRippleButton({

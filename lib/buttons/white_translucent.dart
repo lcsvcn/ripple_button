@@ -5,6 +5,9 @@ class WhiteTranslucentRippleButton extends StatelessWidget {
 
   final String text;
 
+
+   /// [RippleButtonStyle] expects the styles of the button.
+   /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
 
   WhiteTranslucentRippleButton({

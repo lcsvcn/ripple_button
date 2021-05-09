@@ -4,8 +4,10 @@ class AmberRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
-  final text;
+  final String text;
 
+  /// [RippleButtonStyle] expects the styles of the button.
+  /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
 
   AmberRippleButton({

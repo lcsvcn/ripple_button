@@ -6,6 +6,8 @@ class BlueTranslucentRippleButton extends StatelessWidget {
 
   final String text;
 
+  /// [RippleButtonStyle] expects the styles of the button.
+  /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
 
   BlueTranslucentRippleButton({
@@ -37,11 +39,12 @@ class BlueTranslucentRippleButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: style.text ?? TextStyle(
-          color: Color(0xFF003FA2),
-          fontSize: 16,
-          fontWeight: FontWeight.w900,
-        ),
+        style: style.text ??
+            TextStyle(
+              color: Color(0xFF003FA2),
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+            ),
       ),
     );
   }
