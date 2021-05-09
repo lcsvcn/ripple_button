@@ -31,7 +31,7 @@ class CustomRippleButton extends StatelessWidget {
       child: child,
       style: ButtonStyle(
         minimumSize: MaterialStateProperty.all<Size>(Size(
-          maxWidth,
+          style.width ?? maxWidth,
           style.height,
         )),
         elevation: MaterialStateProperty.all<double>(

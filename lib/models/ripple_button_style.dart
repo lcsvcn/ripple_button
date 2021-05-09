@@ -15,6 +15,11 @@ class RippleButtonStyle {
   /// [default] value is no border
   final double height;
 
+  /// [width] expects a [double]
+  /// This will change the width to the ripple button
+  /// [default] value is screen size width
+  final double? width;
+
   /// [border] expects a [RippleButtonBorder]
   /// This will change the style from the [text] inside the ripple button
   /// [default] value is no border
@@ -28,6 +33,7 @@ class RippleButtonStyle {
   const RippleButtonStyle({
     this.color = const RippleButtonColor(),
     this.height = 40,
+    this.width,
     this.elevation = 0.0,
     this.border = const RippleButtonBorder(),
     this.text,

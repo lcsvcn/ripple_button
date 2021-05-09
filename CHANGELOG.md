@@ -1,3 +1,6 @@
+## 2.0.3
+* Added width to RippleButtonStyles
+
 ## 2.0.2
 * Exposed Styles
 
