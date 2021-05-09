@@ -4,6 +4,7 @@ class BlueTranslucentRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
+  /// [text] expects a String that will be show inside the button
   final String text;
 
   /// [RippleButtonStyle] expects the styles of the button.

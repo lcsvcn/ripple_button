@@ -1,13 +1,14 @@
 part of custom_ripple_button;
 
 class WhiteTranslucentRippleButton extends StatelessWidget {
+  /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
+  /// [text] expects a String that will be show inside the button
   final String text;
 
-
-   /// [RippleButtonStyle] expects the styles of the button.
-   /// Note: Not all styles can be since is a preset button
+  /// [RippleButtonStyle] expects the styles of the button.
+  /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
 
   WhiteTranslucentRippleButton({
@@ -39,11 +40,12 @@ class WhiteTranslucentRippleButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: style.text ?? TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.w900,
-        ),
+        style: style.text ??
+            TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+            ),
       ),
     );
   }
