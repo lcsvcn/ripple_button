@@ -10,11 +10,13 @@ part 'package:ripple_button/buttons/blue_translucent.dart';
 part 'package:ripple_button/buttons/white_translucent.dart';
 
 class CustomRippleButton extends StatelessWidget {
+  /// [RippleButtonStyle] expects the styles of the button.
   final RippleButtonStyle style;
 
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
+  /// [child] expects a text to be inside the button
   final Text child;
 
   CustomRippleButton({
