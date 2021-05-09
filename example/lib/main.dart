@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ripple_button/models/ripple_button_style.dart';
 import 'package:ripple_button/ripple_button.dart';
 import 'package:another_flushbar/flushbar.dart';
 

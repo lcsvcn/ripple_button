@@ -1,4 +1,4 @@
-part of 'package:ripple_button/ripple_button.dart';
+part of ripple_button;
 
 /// This are pre-config designs for the ripple button
 /// This is optional, if not set

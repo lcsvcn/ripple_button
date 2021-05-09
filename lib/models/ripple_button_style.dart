@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of ripple_button;
 
 class RippleButtonStyle {
   /// [color] expects a [RippleButtonColor]

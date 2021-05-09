@@ -1,3 +1,6 @@
+## 2.0.2
+* Exposed Styles
+
 ## 2.0.1
 * Changed dart comments
 
