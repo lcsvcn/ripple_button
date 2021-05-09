@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ripple_button/ripple_button.dart';
 
 part 'package:ripple_button/buttons/yellow.dart';
+part 'package:ripple_button/buttons/amber.dart';
 part 'package:ripple_button/buttons/blue_translucent.dart';
 part 'package:ripple_button/buttons/white_translucent.dart';
 

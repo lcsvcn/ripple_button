@@ -69,6 +69,13 @@ class RippleButton extends StatelessWidget {
           style: style,
         );
 
+      case RippleButtonType.AMBER:
+        return AmberRippleButton(
+          onPressed: onPressed,
+          text: text,
+          style: style,
+        );
+
       default:
         return CustomRippleButton(
           style: style,

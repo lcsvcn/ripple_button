@@ -6,6 +6,7 @@ part of ripple_button;
 ///  [default] value is [RippleButtonType.none]
 enum RippleButtonType {
   YELLOW,
+  AMBER,
   WHITE_TRANSLUCENT,
   BLUE_TRANSLUCENT,
   NONE,

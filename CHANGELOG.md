@@ -1,3 +1,6 @@
+## 2.1.0
+* Added new button type: AMBER!
+
 ## 2.0.4
 * Added more to customization to default button types
 

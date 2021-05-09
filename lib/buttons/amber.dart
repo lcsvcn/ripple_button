@@ -1,6 +1,6 @@
 part of custom_ripple_button;
 
-class YellowRippleButton extends StatelessWidget {
+class AmberRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
@@ -8,7 +8,7 @@ class YellowRippleButton extends StatelessWidget {
 
   final RippleButtonStyle style;
 
-  YellowRippleButton({
+  AmberRippleButton({
     required this.onPressed,
     required this.text,
     required this.style,
@@ -22,7 +22,7 @@ class YellowRippleButton extends StatelessWidget {
         height: style.height,
         elevation: style.elevation,
         color: RippleButtonColor(
-          background: Color(0xFFFFC800),
+          background: Color(0xFFFFB300),
           foreground: style.color.foreground,
           shadow: style.color.shadow,
         ),

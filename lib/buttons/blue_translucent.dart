@@ -20,6 +20,7 @@ class BlueTranslucentRippleButton extends StatelessWidget {
       style: RippleButtonStyle(
         width: style.width,
         height: style.height,
+        elevation: style.elevation,
         color: RippleButtonColor(
           background: Colors.transparent,
           foreground: style.color.foreground,
@@ -36,7 +37,7 @@ class BlueTranslucentRippleButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStyle(
+        style: style.text ?? TextStyle(
           color: Color(0xFF003FA2),
           fontSize: 16,
           fontWeight: FontWeight.w900,
