@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              color: Colors.white,
+              color: Colors.yellow,
               child: RippleButton(
                 text: "Blue Translucent Button",
                 padding: EdgeInsets.all(16),
@@ -84,27 +84,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              color: Colors.yellow,
+              color: Colors.pink,
               child: RippleButton(
-                text: "Custom Button",
+                type: RippleButtonType.AMBER,
+                text: "Amber Button",
                 padding: EdgeInsets.all(16),
-                style: RippleButtonStyle(
-                  color: RippleButtonColor(
-                    background: Colors.red,
-                  ),
-                  text: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
                 onPressed: () {
-                  _showFlushbar("Clicked Custom Button");
+                  _showFlushbar("Clicked Amber Button");
                 },
               ),
             ),
             Container(
-              color: Colors.pink,
+              color: Colors.white,
               child: RippleButton(
-                text: isEnabled ? "Disable Button" : "Enable Button",
+                text: isEnabled
+                    ? "Disable Custom Button"
+                    : "Enable Custom Button",
                 padding: EdgeInsets.all(16),
                 style: RippleButtonStyle(
                   color: RippleButtonColor(
@@ -129,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              color: Colors.pink,
+              color: Colors.white,
               child: RippleButton(
                 isEnabled: isEnabled,
                 text: isEnabled ? "Enabled Button" : "Disabled Button",
