@@ -1,3 +1,6 @@
+## 2.2.2
+* Allow [onPressed] to be null
+
 ## 2.2.1
 * Added [disabled] attribute to [RippleButtonColor] to allow add a custom disabled color
 * Improved example to demostrate [isEnabled] in action
