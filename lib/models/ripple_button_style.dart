@@ -69,9 +69,14 @@ class RippleButtonColor {
   /// This will change the shadow color from the button
   final Color shadow;
 
+  /// [disabled] expects a [Color]
+  /// This will change the color from the button when it is disabled
+  final Color disabled;
+
   const RippleButtonColor({
     this.background = Colors.amber,
     this.foreground = Colors.black,
     this.shadow = Colors.black,
+    this.disabled = Colors.grey,
   });
 }

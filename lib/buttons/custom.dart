@@ -46,7 +46,7 @@ class CustomRippleButton extends StatelessWidget {
           style.elevation,
         ),
         backgroundColor: MaterialStateProperty.all<Color>(
-          style.color.background,
+          isEnabled ? style.color.background : style.color.disabled,
         ),
         foregroundColor: MaterialStateProperty.all<Color>(
           style.color.foreground,

@@ -44,6 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
     flush.show(context);
   }
 
+  bool isEnabled = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,24 +96,61 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.white,
                   ),
                 ),
-                onPressed: () => {_showFlushbar("Clicked Custom Button")},
+                onPressed: () {
+                  _showFlushbar("Clicked Custom Button");
+                },
               ),
             ),
             Container(
               color: Colors.pink,
               child: RippleButton(
-                isEnabled: false,
-                text: "Disabled Button",
+                text: isEnabled ? "Disable Button" : "Enable Button",
                 padding: EdgeInsets.all(16),
                 style: RippleButtonStyle(
                   color: RippleButtonColor(
-                    background: Colors.grey,
+                    background: Colors.orange,
                   ),
                   text: TextStyle(
                     color: Colors.white,
                   ),
+                  border: RippleButtonBorder(
+                    side: BorderSide(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    radius: BorderRadius.circular(30),
+                  ),
                 ),
-                onPressed: () => {_showFlushbar("Disable Button")},
+                onPressed: () {
+                  setState(() => {isEnabled = !isEnabled});
+                  _showFlushbar(
+                      isEnabled ? "Enabled Button" : "Disabled Button");
+                },
+              ),
+            ),
+            Container(
+              color: Colors.pink,
+              child: RippleButton(
+                isEnabled: isEnabled,
+                text: isEnabled ? "Enabled Button" : "Disabled Button",
+                padding: EdgeInsets.all(16),
+                style: RippleButtonStyle(
+                  color: RippleButtonColor(
+                    background: Colors.orange,
+                  ),
+                  text: TextStyle(
+                    color: Colors.white,
+                  ),
+                  border: RippleButtonBorder(
+                    side: BorderSide(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    radius: BorderRadius.circular(30),
+                  ),
+                ),
+                onPressed: () =>
+                    {_showFlushbar("Clicked on Enable/Disable Button")},
               ),
             ),
           ],

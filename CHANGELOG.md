@@ -1,3 +1,7 @@
+## 2.2.1
+* Added [disabled] attribute to [RippleButtonColor] to allow add a custom disabled color
+* Improved example to demostrate [isEnabled] in action
+
 ## 2.2.0
 * Added [isEnabled] attribute to enable/disable button
 
