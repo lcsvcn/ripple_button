@@ -11,6 +11,10 @@ class RippleButton extends StatelessWidget {
   /// This will change the text inside the button
   final String text;
 
+   /// [isEnabled] expects a [boolean]
+  /// This will enable or disable button
+  final bool isEnabled;
+
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
@@ -36,6 +40,7 @@ class RippleButton extends StatelessWidget {
   RippleButton({
     required this.text,
     required this.onPressed,
+    this.isEnabled = true,
     this.padding = EdgeInsets.zero,
     this.type = RippleButtonType.NONE,
     this.style = const RippleButtonStyle(),
@@ -51,6 +56,7 @@ class RippleButton extends StatelessWidget {
       case RippleButtonType.BLUE_TRANSLUCENT:
         return BlueTranslucentRippleButton(
           onPressed: onPressed,
+          isEnabled: isEnabled,
           text: text,
           style: style,
         );
@@ -58,6 +64,7 @@ class RippleButton extends StatelessWidget {
       case RippleButtonType.WHITE_TRANSLUCENT:
         return WhiteTranslucentRippleButton(
           onPressed: onPressed,
+          isEnabled: isEnabled,
           text: text,
           style: style,
         );
@@ -65,6 +72,7 @@ class RippleButton extends StatelessWidget {
       case RippleButtonType.YELLOW:
         return YellowRippleButton(
           onPressed: onPressed,
+          isEnabled: isEnabled,
           text: text,
           style: style,
         );
@@ -72,6 +80,7 @@ class RippleButton extends StatelessWidget {
       case RippleButtonType.AMBER:
         return AmberRippleButton(
           onPressed: onPressed,
+          isEnabled: isEnabled,
           text: text,
           style: style,
         );
@@ -80,6 +89,7 @@ class RippleButton extends StatelessWidget {
         return CustomRippleButton(
           style: style,
           onPressed: onPressed,
+          isEnabled: isEnabled,
           child: textWidget,
         );
     }

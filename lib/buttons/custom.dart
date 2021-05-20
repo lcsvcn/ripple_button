@@ -16,11 +16,16 @@ class CustomRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
+   /// [isEnabled] expects a [boolean]
+  /// This will enable or disable button
+  final bool isEnabled;
+
   /// [child] expects a widget to be inside the button
   final Text child;
 
   CustomRippleButton({
     required this.style,
+    required this.isEnabled,
     required this.onPressed,
     required this.child,
   });
@@ -30,7 +35,7 @@ class CustomRippleButton extends StatelessWidget {
     final double maxWidth = MediaQuery.of(context).size.width;
 
     return ElevatedButton(
-      onPressed: onPressed,
+      onPressed: isEnabled ? onPressed : null,
       child: child,
       style: ButtonStyle(
         minimumSize: MaterialStateProperty.all<Size>(Size(

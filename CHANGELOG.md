@@ -1,3 +1,6 @@
+## 2.2.0
+* Added [isEnabled] attribute to enable/disable button
+
 ## 2.1.1
 * Added dart comments
 

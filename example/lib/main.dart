@@ -97,6 +97,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () => {_showFlushbar("Clicked Custom Button")},
               ),
             ),
+            Container(
+              color: Colors.pink,
+              child: RippleButton(
+                isEnabled: false,
+                text: "Disabled Button",
+                padding: EdgeInsets.all(16),
+                style: RippleButtonStyle(
+                  color: RippleButtonColor(
+                    background: Colors.grey,
+                  ),
+                  text: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onPressed: () => {_showFlushbar("Disable Button")},
+              ),
+            ),
           ],
         ),
       ),

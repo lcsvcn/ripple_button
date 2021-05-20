@@ -4,6 +4,10 @@ class AmberRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function() onPressed;
 
+   /// [isEnabled] expects a [boolean]
+  /// This will enable or disable button
+  final bool isEnabled;
+
   /// [text] expects a String that will be show inside the button
   final String text;
 
@@ -13,6 +17,7 @@ class AmberRippleButton extends StatelessWidget {
 
   AmberRippleButton({
     required this.onPressed,
+    required this.isEnabled,
     required this.text,
     required this.style,
   });
@@ -20,6 +25,7 @@ class AmberRippleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomRippleButton(
+      isEnabled: isEnabled,
       style: RippleButtonStyle(
         width: style.width,
         height: style.height,

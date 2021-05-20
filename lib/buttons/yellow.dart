@@ -7,12 +7,17 @@ class YellowRippleButton extends StatelessWidget {
   /// [text] expects a String that will be show inside the button
   final String text;
 
+   /// [isEnabled] expects a [boolean]
+  /// This will enable or disable button
+  final bool isEnabled;
+
   /// [RippleButtonStyle] expects the styles of the button.
   /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
 
   YellowRippleButton({
     required this.onPressed,
+    required this.isEnabled,
     required this.text,
     required this.style,
   });
@@ -20,6 +25,7 @@ class YellowRippleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomRippleButton(
+      isEnabled: isEnabled,
       style: RippleButtonStyle(
         width: style.width,
         height: style.height,
