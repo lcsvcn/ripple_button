@@ -16,7 +16,7 @@ class RippleButton extends StatelessWidget {
   final bool isEnabled;
 
   /// [onPressed] expects a function that will be executed on button press.
-  final Function() onPressed;
+  final Function()? onPressed;
 
   /// [padding]  expects a [EdgeInsets]
   /// This will change the padding of button to other widgets
@@ -39,7 +39,7 @@ class RippleButton extends StatelessWidget {
 
   RippleButton({
     required this.text,
-    required this.onPressed,
+    this.onPressed,
     this.isEnabled = true,
     this.padding = EdgeInsets.zero,
     this.type = RippleButtonType.NONE,

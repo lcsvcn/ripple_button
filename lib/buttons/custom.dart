@@ -14,7 +14,10 @@ class CustomRippleButton extends StatelessWidget {
   final RippleButtonStyle style;
 
   /// [onPressed] expects a function that will be executed on button press.
-  final Function() onPressed;
+  /// if value is [null] it will not be clickable,
+  /// but disabled design will not be applied.
+  /// To apply disabled design use [isEnabled] attribute
+  final Function()? onPressed;
 
   /// [isEnabled] expects a [boolean]
   /// This will enable or disable button

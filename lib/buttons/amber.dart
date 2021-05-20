@@ -2,7 +2,7 @@ part of custom_ripple_button;
 
 class AmberRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
-  final Function() onPressed;
+  final Function()? onPressed;
 
   /// [isEnabled] expects a [boolean]
   /// This will enable or disable button
