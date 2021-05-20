@@ -7,7 +7,7 @@ class WhiteTranslucentRippleButton extends StatelessWidget {
   /// [text] expects a String that will be show inside the button
   final String text;
 
-   /// [isEnabled] expects a [boolean]
+  /// [isEnabled] expects a [boolean]
   /// This will enable or disable button
   final bool isEnabled;
 
