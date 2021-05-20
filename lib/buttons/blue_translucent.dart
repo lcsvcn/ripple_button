@@ -34,6 +34,8 @@ class BlueTranslucentRippleButton extends StatelessWidget {
           background: Colors.transparent,
           foreground: style.color.foreground,
           shadow: style.color.shadow,
+          disabled: style.color.disabled,
+          overlay: style.color.overlay,
         ),
         border: RippleButtonBorder(
           radius: BorderRadius.circular(30),

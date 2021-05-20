@@ -60,6 +60,9 @@ class CustomRippleButton extends StatelessWidget {
           shadowColor: MaterialStateProperty.all<Color>(
             style.color.shadow,
           ),
+          overlayColor: MaterialStateProperty.all<Color>(
+            style.color.overlay,
+          ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: style.border.radius,

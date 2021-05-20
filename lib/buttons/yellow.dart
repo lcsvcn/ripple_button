@@ -34,6 +34,8 @@ class YellowRippleButton extends StatelessWidget {
           background: Color(0xFFFFC800),
           foreground: style.color.foreground,
           shadow: style.color.shadow,
+          disabled: style.color.disabled,
+          overlay: style.color.overlay,
         ),
         border: RippleButtonBorder(
           radius: BorderRadius.circular(30),

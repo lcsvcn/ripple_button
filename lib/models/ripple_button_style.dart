@@ -73,10 +73,15 @@ class RippleButtonColor {
   /// This will change the color from the button when it is disabled
   final Color disabled;
 
+  /// [overlay] expects a [Color]
+  /// This will change the color on mouse over
+  final Color overlay;
+
   const RippleButtonColor({
     this.background = Colors.amber,
     this.foreground = Colors.black,
     this.shadow = Colors.black,
     this.disabled = Colors.grey,
+    this.overlay = Colors.white24,
   });
 }
