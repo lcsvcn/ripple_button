@@ -32,32 +32,36 @@ class CustomRippleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double maxWidth = MediaQuery.of(context).size.width;
+    final double _width = style.width ?? MediaQuery.of(context).size.width;
 
-    return ElevatedButton(
-      onPressed: isEnabled ? onPressed : null,
-      child: child,
-      style: ButtonStyle(
-        minimumSize: MaterialStateProperty.all<Size>(Size(
-          style.width ?? maxWidth,
-          style.height,
-        )),
-        elevation: MaterialStateProperty.all<double>(
-          style.elevation,
-        ),
-        backgroundColor: MaterialStateProperty.all<Color>(
-          isEnabled ? style.color.background : style.color.disabled,
-        ),
-        foregroundColor: MaterialStateProperty.all<Color>(
-          style.color.foreground,
-        ),
-        shadowColor: MaterialStateProperty.all<Color>(
-          style.color.shadow,
-        ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: style.border.radius,
-            side: style.border.side,
+    return AnimatedOpacity(
+      opacity: isEnabled ? 1.0 : 0.5,
+      duration: Duration(milliseconds: 200),
+      child: ElevatedButton(
+        onPressed: isEnabled ? onPressed : null,
+        child: child,
+        style: ButtonStyle(
+          minimumSize: MaterialStateProperty.all<Size>(Size(
+            _width,
+            style.height,
+          )),
+          elevation: MaterialStateProperty.all<double>(
+            style.elevation,
+          ),
+          backgroundColor: MaterialStateProperty.all<Color>(
+            isEnabled ? style.color.background : style.color.disabled,
+          ),
+          foregroundColor: MaterialStateProperty.all<Color>(
+            style.color.foreground,
+          ),
+          shadowColor: MaterialStateProperty.all<Color>(
+            style.color.shadow,
+          ),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: style.border.radius,
+              side: style.border.side,
+            ),
           ),
         ),
       ),
