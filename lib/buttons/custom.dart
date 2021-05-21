@@ -3,13 +3,14 @@ library custom_ripple_button;
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:ripple_button/ripple_button.dart';
+import 'package:ripple_button/widget/animated_bouncing.dart';
 
 part 'package:ripple_button/buttons/yellow.dart';
 part 'package:ripple_button/buttons/amber.dart';
 part 'package:ripple_button/buttons/blue_translucent.dart';
 part 'package:ripple_button/buttons/white_translucent.dart';
 
-class CustomRippleButton extends StatelessWidget {
+class CustomRippleButton extends StatefulWidget {
   /// [RippleButtonStyle] expects the styles of the button.
   final RippleButtonStyle style;
 
@@ -34,39 +35,52 @@ class CustomRippleButton extends StatelessWidget {
   });
 
   @override
+  _CustomRippleButtonState createState() => _CustomRippleButtonState();
+}
+
+class _CustomRippleButtonState extends State<CustomRippleButton>
+    with SingleTickerProviderStateMixin {
+
+  @override
   Widget build(BuildContext context) {
-    final double _width = style.width ?? MediaQuery.of(context).size.width;
+    final double _width =
+        widget.style.width ?? MediaQuery.of(context).size.width;
 
     return AnimatedOpacity(
-      opacity: isEnabled ? 1.0 : 0.5,
+      opacity: widget.isEnabled ? 1.0 : 0.8,
       duration: Duration(milliseconds: 200),
-      child: ElevatedButton(
-        onPressed: isEnabled ? onPressed : null,
-        child: child,
-        style: ButtonStyle(
-          minimumSize: MaterialStateProperty.all<Size>(Size(
-            _width,
-            style.height,
-          )),
-          elevation: MaterialStateProperty.all<double>(
-            style.elevation,
-          ),
-          backgroundColor: MaterialStateProperty.all<Color>(
-            isEnabled ? style.color.background : style.color.disabled,
-          ),
-          foregroundColor: MaterialStateProperty.all<Color>(
-            style.color.foreground,
-          ),
-          shadowColor: MaterialStateProperty.all<Color>(
-            style.color.shadow,
-          ),
-          overlayColor: MaterialStateProperty.all<Color>(
-            style.color.overlay,
-          ),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: style.border.radius,
-              side: style.border.side,
+      child: AnimatedBouncing(
+        shouldAnimate: widget.isEnabled,
+        child: ElevatedButton(
+          onPressed: widget.isEnabled ? widget.onPressed : null,
+          child: widget.child,
+          style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all<Size>(Size(
+              _width,
+              widget.style.height,
+            )),
+            elevation: MaterialStateProperty.all<double>(
+              widget.style.elevation,
+            ),
+            backgroundColor: MaterialStateProperty.all<Color>(
+              widget.isEnabled
+                  ? widget.style.color.background
+                  : widget.style.color.disabled,
+            ),
+            foregroundColor: MaterialStateProperty.all<Color>(
+              widget.style.color.foreground,
+            ),
+            shadowColor: MaterialStateProperty.all<Color>(
+              widget.style.color.shadow,
+            ),
+            overlayColor: MaterialStateProperty.all<Color>(
+              widget.style.color.overlay,
+            ),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: widget.style.border.radius,
+                side: widget.style.border.side,
+              ),
             ),
           ),
         ),

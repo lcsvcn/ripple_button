@@ -49,7 +49,7 @@ class RippleButton extends StatelessWidget {
   _selectButtonType() {
     final textWidget = Text(
       text,
-      style: RippleButtonStyle().text,
+      style: style.text,
     );
 
     switch (type) {
