@@ -1,3 +1,6 @@
+## 2.3.1
+* Change bouncing style
+
 ## 2.3.0
 * Animate button when deactivate or activate, use [isEnabled] to perform bouncing animation
 
