@@ -10,6 +10,10 @@ class AnimatedBouncing extends StatefulWidget {
   ///  > 1 => increase the bouncing effect
   final double scale;
 
+  final double lowerBound;
+
+  final double upperBound;
+
   /// [duration] is the time duration of the boucing effect
   final Duration duration;
 
@@ -19,9 +23,14 @@ class AnimatedBouncing extends StatefulWidget {
   const AnimatedBouncing({
     required this.child,
     this.scale = 1.0,
+    this.lowerBound = -0.1,
+    this.upperBound = 0.1,
     this.shouldAnimate = false,
-    this.duration = const Duration(milliseconds: 200),
-  }) : assert(scale >= 0.0 && scale <= 1.0);
+    this.duration = const Duration(milliseconds: 250),
+  }) : assert(lowerBound >= -1.0 &&
+            lowerBound <= 1.0 &&
+            upperBound >= -1.0 &&
+            upperBound <= 1.0);
 
   @override
   _AnimatedBouncingState createState() => _AnimatedBouncingState();
@@ -36,10 +45,9 @@ class _AnimatedBouncingState extends State<AnimatedBouncing>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      value: widget.scale,
       duration: widget.duration,
-      lowerBound: 0.0,
-      upperBound: 0.1,
+      lowerBound: widget.lowerBound,
+      upperBound: widget.upperBound,
       vsync: this,
     );
   }
@@ -82,7 +90,7 @@ class _AnimatedBouncingState extends State<AnimatedBouncing>
       child: widget.child,
       builder: (context, child) {
         return Transform.scale(
-          scale: 1 - animation.value,
+          scale: widget.scale - animation.value,
           child: child,
         );
       },

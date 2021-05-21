@@ -40,7 +40,6 @@ class CustomRippleButton extends StatefulWidget {
 
 class _CustomRippleButtonState extends State<CustomRippleButton>
     with SingleTickerProviderStateMixin {
-
   @override
   Widget build(BuildContext context) {
     final double _width =
