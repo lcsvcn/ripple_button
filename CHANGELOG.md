@@ -1,3 +1,6 @@
+## 2.3.2
+* Just update readme
+
 ## 2.3.1
 * Change bouncing style
 
