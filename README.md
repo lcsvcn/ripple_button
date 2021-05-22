@@ -11,7 +11,8 @@ A fully customizable button with material ripple effect. Easy to use having some
 
 
 ## Bouncing Animation:
-<img src="https://user-images.githubusercontent.com/6011385/119212109-b6cce080-ba8c-11eb-82d4-cbd7ebf61b81.gif"  width="178.75" height="366.75">
+<img src="https://user-images.githubusercontent.com/6011385/119212241-6dc95c00-ba8d-11eb-81e6-7dcb55e34f0a.gif"  width="178.75" height="366.75">
+
 
 ## RippleButton
 
