@@ -73,7 +73,8 @@ propType: `RippleButtonColor`
 Expects a RippleButtonBorder
 This will change the border style to the ripple button
 
-propType: `RippleButtonColor`
+propType: `RippleButtonBorder`
+
 ## RippleButtonStyle
 
 #### `elevation`
@@ -88,17 +89,17 @@ This will change the height to the ripple button
 
 propType: `double`
 
+#### `width`
+
+This will change the width to the ripple button
+
+propType: `double`
+
 #### `text`
 
 This will change the text style of the text inside the ripple button
 
 propType: `TextStyle`
-
-#### `border`
-
-This will add a border to the ripple button
-
-propType: `double`
 
 ## RippleButtonColor
 
