@@ -1,11 +1,12 @@
-## 2.4.0
-* Change RippleButton(text: "Title button") to RippleButto("Button Title")
-* Update Readme
+## 3.0.0
+* Change [text] - Change from RippleButton(text: "Title button") to RippleButto("Button Title")
+* Moved old params RippleButtonColor and RippleButtonBorder outside RippleButtonStyle (now it is [color] and [border] respectively)
 * Added more colors
 * Improved bouncing animation
+* Update Readme
 
 ## 2.3.1
-* Change bouncing style
+* Improved bouncing animation
 
 ## 2.3.0
 * Animate button when deactivate or activate, use [isEnabled] to perform bouncing animation

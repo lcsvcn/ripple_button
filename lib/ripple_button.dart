@@ -5,6 +5,8 @@ import 'package:ripple_button/buttons/custom.dart';
 
 part 'package:ripple_button/models/ripple_button_type.dart';
 part 'package:ripple_button/models/ripple_button_style.dart';
+part 'package:ripple_button/models/ripple_button_color.dart';
+part 'package:ripple_button/models/ripple_button_border.dart';
 
 class RippleButton extends StatelessWidget {
   /// [text] expects a [String]
@@ -31,11 +33,25 @@ class RippleButton extends StatelessWidget {
   final RippleButtonType type;
 
   /// [style] expects a [RippleButtonStyle]
-  /// This will change the style form the Ripple Button
+  /// This will change the style from the Ripple Button
   /// Send values for your custom Ripple Button
-  /// If you send any Ripple Button [type], this will not be used.
+  /// If you send any Ripple Button [type], this may not be used.
   /// [default] value is [RippleButtonStyle())]
   final RippleButtonStyle style;
+
+  /// [color] expects a [RippleButtonColor]
+  /// This will change the color from the Ripple Button
+  /// Send values for your custom Ripple Button
+  /// If you send any Ripple Button [type], this may not be used.
+  /// [default] value is [RippleButtonColor())]
+  final RippleButtonColor color;
+
+  /// [color] expects a [RippleButtonBorder]
+  /// This will change the border from the Ripple Button
+  /// Send values for your custom Ripple Button
+  /// If you send any Ripple Button [type], this may not be used.
+  /// [default] value is [RippleButtonBorder())]
+  final RippleButtonBorder border;
 
   RippleButton(
     this.text, {
@@ -44,6 +60,8 @@ class RippleButton extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.type = RippleButtonType.NONE,
     this.style = const RippleButtonStyle(),
+    this.color = const RippleButtonColor(),
+    this.border = const RippleButtonBorder(),
   });
 
   _selectButtonType() {
@@ -59,6 +77,8 @@ class RippleButton extends StatelessWidget {
           isEnabled: isEnabled,
           text: text,
           style: style,
+          color: color,
+          border: border,
         );
 
       case RippleButtonType.WHITE_TRANSLUCENT:
@@ -67,6 +87,8 @@ class RippleButton extends StatelessWidget {
           isEnabled: isEnabled,
           text: text,
           style: style,
+          color: color,
+          border: border,
         );
 
       case RippleButtonType.YELLOW:
@@ -75,6 +97,8 @@ class RippleButton extends StatelessWidget {
           isEnabled: isEnabled,
           text: text,
           style: style,
+          color: color,
+          border: border,
         );
 
       case RippleButtonType.AMBER:
@@ -83,14 +107,18 @@ class RippleButton extends StatelessWidget {
           isEnabled: isEnabled,
           text: text,
           style: style,
+          color: color,
+          border: border,
         );
 
       default:
         return CustomRippleButton(
-          style: style,
+          child: textWidget,
           onPressed: onPressed,
           isEnabled: isEnabled,
-          child: textWidget,
+          style: style,
+          color: color,
+          border: border,
         );
     }
   }

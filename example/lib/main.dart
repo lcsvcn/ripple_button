@@ -88,22 +88,22 @@ class _MyHomePageState extends State<MyHomePage> {
             RippleButton(
               isEnabled ? "Disable Custom Button" : "Enable Custom Button",
               padding: EdgeInsets.all(16),
-              style: RippleButtonStyle(
-                color: RippleButtonColor(
-                  background: Colors.orange,
+              color: RippleButtonColor(
+                background: Colors.orange,
+              ),
+              border: RippleButtonBorder(
+                side: BorderSide(
+                  color: Colors.yellowAccent,
+                  width: 1.5,
                 ),
+              ),
+              style: RippleButtonStyle(
                 text: TextStyle(
                   color: Color(0xFF8185E2),
                   fontSize: 18,
                   fontWeight: FontWeight.w900,
                   letterSpacing: 0.1,
                   wordSpacing: 0.5,
-                ),
-                border: RippleButtonBorder(
-                  side: BorderSide(
-                    color: Colors.yellowAccent,
-                    width: 1.5,
-                  ),
                 ),
               ),
               onPressed: () {
@@ -115,10 +115,10 @@ class _MyHomePageState extends State<MyHomePage> {
               isEnabled ? "Enabled Button" : "Disabled Button",
               isEnabled: isEnabled,
               padding: EdgeInsets.all(16),
+              color: RippleButtonColor(
+                background: Colors.orange,
+              ),
               style: RippleButtonStyle(
-                color: RippleButtonColor(
-                  background: Colors.orange,
-                ),
                 text: TextStyle(
                   color: Color(0xFF8185E2),
                   fontSize: 18,
@@ -126,11 +126,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   letterSpacing: 0.1,
                   wordSpacing: 0.5,
                 ),
-                border: RippleButtonBorder(
-                  side: BorderSide(
-                    color: Colors.white,
-                    width: 1.5,
-                  ),
+              ),
+              border: RippleButtonBorder(
+                side: BorderSide(
+                  color: Colors.white,
+                  width: 1.5,
                 ),
               ),
               onPressed: () =>

@@ -11,36 +11,46 @@ class YellowRippleButton extends StatelessWidget {
   /// This will enable or disable button
   final bool isEnabled;
 
-  /// [RippleButtonStyle] expects the styles of the button.
+  /// [RippleButtonStyle] expects styles attributes for the ripple button.
   /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
+
+  /// [RippleButtonColor] expects colors attributes for the ripple button.
+  /// Note: Not all colors can be since is a preset button
+  final RippleButtonColor color;
+
+  /// [RippleButtonColor] expects border attributes for the ripple button.
+  /// Note: Not all colors can be since is a preset button
+  final RippleButtonBorder border;
 
   YellowRippleButton({
     required this.onPressed,
     required this.isEnabled,
     required this.text,
     required this.style,
+    required this.color,
+    required this.border,
   });
 
   @override
   Widget build(BuildContext context) {
     return CustomRippleButton(
       isEnabled: isEnabled,
+      color: RippleButtonColor(
+        background: Color(0xFFFFC800),
+        foreground: color.foreground,
+        shadow: color.shadow,
+        disabled: color.disabled,
+        overlay: color.overlay,
+      ),
+      border: RippleButtonBorder(
+        radius: BorderRadius.circular(30),
+        side: border.side,
+      ),
       style: RippleButtonStyle(
         width: style.width,
         height: style.height,
         elevation: style.elevation,
-        color: RippleButtonColor(
-          background: Color(0xFFFFC800),
-          foreground: style.color.foreground,
-          shadow: style.color.shadow,
-          disabled: style.color.disabled,
-          overlay: style.color.overlay,
-        ),
-        border: RippleButtonBorder(
-          radius: BorderRadius.circular(30),
-          side: style.border.side,
-        ),
       ),
       onPressed: onPressed,
       child: Text(

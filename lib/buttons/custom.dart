@@ -11,8 +11,8 @@ part 'package:ripple_button/buttons/blue_translucent.dart';
 part 'package:ripple_button/buttons/white_translucent.dart';
 
 class CustomRippleButton extends StatefulWidget {
-  /// [RippleButtonStyle] expects the styles of the button.
-  final RippleButtonStyle style;
+  /// [child] expects a widget to be inside the button
+  final Text child;
 
   /// [onPressed] expects a function that will be executed on button press.
   /// if value is [null] it will not be clickable,
@@ -24,14 +24,25 @@ class CustomRippleButton extends StatefulWidget {
   /// This will enable or disable button
   final bool isEnabled;
 
-  /// [child] expects a widget to be inside the button
-  final Text child;
+  /// [RippleButtonStyle] expects styles attributes for the ripple button.
+  /// Note: Not all styles can be since is a preset button
+  final RippleButtonStyle style;
+
+  /// [RippleButtonColor] expects colors attributes for the ripple button.
+  /// Note: Not all colors can be since is a preset button
+  final RippleButtonColor color;
+
+  /// [RippleButtonColor] expects border attributes for the ripple button.
+  /// Note: Not all colors can be since is a preset button
+  final RippleButtonBorder border;
 
   CustomRippleButton({
     required this.style,
     required this.isEnabled,
     required this.onPressed,
     required this.child,
+    required this.color,
+    required this.border,
   });
 
   @override
@@ -63,22 +74,22 @@ class _CustomRippleButtonState extends State<CustomRippleButton>
             ),
             backgroundColor: MaterialStateProperty.all<Color>(
               widget.isEnabled
-                  ? widget.style.color.background
-                  : widget.style.color.disabled,
+                  ? widget.color.background
+                  : widget.color.disabled,
             ),
             foregroundColor: MaterialStateProperty.all<Color>(
-              widget.style.color.foreground,
+              widget.color.foreground,
             ),
             shadowColor: MaterialStateProperty.all<Color>(
-              widget.style.color.shadow,
+              widget.color.shadow,
             ),
             overlayColor: MaterialStateProperty.all<Color>(
-              widget.style.color.overlay,
+              widget.color.overlay,
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                borderRadius: widget.style.border.radius,
-                side: widget.style.border.side,
+                borderRadius: widget.border.radius,
+                side: widget.border.side,
               ),
             ),
           ),
