@@ -61,14 +61,20 @@ This is optional, if not set the widget will use your design for the button
 
 propType: `RippleButtonType`
 
-## RippleButtonStyle
-
 #### `color`
 
 Expects a RippleButtonColor
-This will change the color to the ripple button
+This will change the color style to the ripple button
 
 propType: `RippleButtonColor`
+
+#### `border`
+
+Expects a RippleButtonBorder
+This will change the border style to the ripple button
+
+propType: `RippleButtonColor`
+## RippleButtonStyle
 
 #### `elevation`
 
@@ -123,6 +129,22 @@ propType: `Color`
 This will change the shadow color from the button
 
 propType: `Color`
+
+## RippleButtonBorder
+
+#### `side`
+
+Expects a BorderSide to change border size, color and style
+Default is none.
+
+propType: `BorderSide`
+
+#### `radius`
+
+Expects a BorderRadius to set border format (round corners for example)
+Default is zero.
+
+propType: `BorderRadius`
 
 ## RippleButtonType
 
