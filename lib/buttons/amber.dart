@@ -11,16 +11,15 @@ class AmberRippleButton extends StatelessWidget {
   /// [text] expects a String that will be show inside the button
   final String text;
 
-/// [RippleButtonStyle] expects styles attributes for the ripple button.
+  /// [RippleButtonStyle] expects styles attributes for the ripple button.
   /// Note: Not all styles can be since is a preset button
   final RippleButtonStyle style;
 
-/// [RippleButtonColor] expects colors attributes for the ripple button.
+  /// [RippleButtonColor] expects colors attributes for the ripple button.
   /// Note: Not all colors can be since is a preset button
   final RippleButtonColor color;
 
-
-/// [RippleButtonColor] expects border attributes for the ripple button.
+  /// [RippleButtonColor] expects border attributes for the ripple button.
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 

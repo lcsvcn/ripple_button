@@ -1,6 +1,5 @@
 part of ripple_button;
 
-
 class RippleButtonBorder {
   /// [side] expects a [BorderSide]
   /// Use this to add a border to the ripple button
