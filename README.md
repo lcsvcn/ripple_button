@@ -143,10 +143,6 @@ propType: `Color`
 <img width="309" alt="Captura de Tela 2021-05-02 às 19 46 53" src="https://user-images.githubusercontent.com/6011385/116830224-27b06500-ab7f-11eb-89c3-0350320aa6dc.png">
 
 
- 
-  **NONE:**
-  Your Custom Design
-
 ## License
 
 See [LICENSE.md](LICENSE.md)
