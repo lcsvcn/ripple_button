@@ -5,11 +5,14 @@
 
 A fully customizable button with material ripple effect. Easy to use having some pre-defined button types.
 
-Here is the example screenshot:
+## Screenshot:
 
 <img src="https://user-images.githubusercontent.com/6011385/119212099-a74d9780-ba8c-11eb-95b6-f87bbe0d7317.png"  width="178.75" height="366.75">
 
-<img src="https://user-images.githubusercontent.com/6011385/119212109-b6cce080-ba8c-11eb-82d4-cbd7ebf61b81.gif"  width="178.75" height="366.75">
+
+## Bouncing Animation:
+<img src="https://user-images.githubusercontent.com/6011385/119212241-6dc95c00-ba8d-11eb-81e6-7dcb55e34f0a.gif"  width="178.75" height="366.75">
+
 
 ## RippleButton
 
@@ -109,6 +112,12 @@ This will change the disabled color from the button
 
 propType: `Color`
 
+#### `overlay`
+
+This will change the color on mouse over
+
+propType: `Color`
+
 #### `shadow`
 
 This will change the shadow color from the button
@@ -133,10 +142,6 @@ propType: `Color`
 
 <img width="309" alt="Captura de Tela 2021-05-02 às 19 46 53" src="https://user-images.githubusercontent.com/6011385/116830224-27b06500-ab7f-11eb-89c3-0350320aa6dc.png">
 
-
- 
-  **NONE:**
-  Your Custom Design
 
 ## License
 
