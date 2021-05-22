@@ -7,7 +7,9 @@ A fully customizable button with material ripple effect. Easy to use having some
 
 Here is the example screenshot:
 
-<img src="https://user-images.githubusercontent.com/6011385/116829511-6f80bd80-ab7a-11eb-92c6-bcf207a55bca.png"  width="178.75" height="366.75">
+<img src="https://user-images.githubusercontent.com/6011385/119212099-a74d9780-ba8c-11eb-95b6-f87bbe0d7317.png"  width="178.75" height="366.75">
+
+<img src="https://user-images.githubusercontent.com/6011385/119212109-b6cce080-ba8c-11eb-82d4-cbd7ebf61b81.gif"  width="178.75" height="366.75">
 
 ## RippleButton
 
