@@ -37,8 +37,8 @@ class RippleButton extends StatelessWidget {
   /// [default] value is [RippleButtonStyle())]
   final RippleButtonStyle style;
 
-  RippleButton({
-    required this.text,
+  RippleButton(
+    this.text, {
     this.onPressed,
     this.isEnabled = true,
     this.padding = EdgeInsets.zero,

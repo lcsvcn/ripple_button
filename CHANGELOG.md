@@ -1,5 +1,8 @@
-## 2.3.2
-* Just update readme
+## 2.4.0
+* Change RippleButton(text: "Title button") to RippleButto("Button Title")
+* Update Readme
+* Added more colors
+* Improved bouncing animation
 
 ## 2.3.1
 * Change bouncing style

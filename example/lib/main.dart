@@ -58,36 +58,35 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RippleButton(
-              text: "Yellow Button",
+              "Yellow Button",
               padding: EdgeInsets.all(16),
               type: RippleButtonType.YELLOW,
               onPressed: () => {_showFlushbar("Clicked Yellow Button")},
             ),
             RippleButton(
-              text: "Blue Translucent Button",
+              "Blue Translucent Button",
               padding: EdgeInsets.all(16),
               type: RippleButtonType.BLUE_TRANSLUCENT,
               onPressed: () =>
                   {_showFlushbar("Clicked Blue Translucent Button")},
             ),
             RippleButton(
-              text: "White Translucent Button",
+              "White Translucent Button",
               padding: EdgeInsets.all(16),
               type: RippleButtonType.WHITE_TRANSLUCENT,
               onPressed: () =>
                   {_showFlushbar("Clicked White Translucent Button")},
             ),
             RippleButton(
+              "Amber Button",
               type: RippleButtonType.AMBER,
-              text: "Amber Button",
               padding: EdgeInsets.all(16),
               onPressed: () {
                 _showFlushbar("Clicked Amber Button");
               },
             ),
             RippleButton(
-              text:
-                  isEnabled ? "Disable Custom Button" : "Enable Custom Button",
+              isEnabled ? "Disable Custom Button" : "Enable Custom Button",
               padding: EdgeInsets.all(16),
               style: RippleButtonStyle(
                 color: RippleButtonColor(
@@ -113,8 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             RippleButton(
+              isEnabled ? "Enabled Button" : "Disabled Button",
               isEnabled: isEnabled,
-              text: isEnabled ? "Enabled Button" : "Disabled Button",
               padding: EdgeInsets.all(16),
               style: RippleButtonStyle(
                 color: RippleButtonColor(
