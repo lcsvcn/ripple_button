@@ -21,11 +21,20 @@ propType: `String`
 
 #### `onPressed`
 
-Expects a function that will be executed on button press.
+Expects a function that will be executed on button press. If null, button will not be clickable. To apply disable design use **isEnabled**
 
-propType: `Function()`
+propType: `Function()?`
 
-**REQUIRED!**
+#### `isEnabled`
+
+This will change the button design and behaviour to show if it is disabled or enabled. 
+
+If false, this will change background color to `disabled` (see `RippleButtonColor`), reduce opacity. The button will also not be clickable.
+
+On activation or deativation it will do a bouncing animation to gain users attention.
+
+
+propType: `bool`
 
 #### `padding`
 
@@ -92,6 +101,10 @@ propType: `Color`
 
 This will change the foreground color from the button
 
+#### `disabled`
+
+This will change the disabled color from the button
+
 propType: `Color`
 
 #### `shadow`
@@ -106,6 +119,10 @@ propType: `Color`
  
   <img width="310" alt="Captura de Tela 2021-05-02 às 19 46 39" src="https://user-images.githubusercontent.com/6011385/116830217-1ebf9380-ab7f-11eb-9657-0e61be9393c8.png">
   
+  **AMBER:**
+  
+   <img width="304" alt="Captura de Tela 2021-05-02 às 19 47 09" src="https://user-images.githubusercontent.com/6011385/119211928-9cdece00-ba8b-11eb-9097-c6bc49a63c9a.png">
+
   **WHITE_TRANSLUCENT:**
   
   <img width="304" alt="Captura de Tela 2021-05-02 às 19 47 09" src="https://user-images.githubusercontent.com/6011385/116830228-3139cd00-ab7f-11eb-833c-1db7a668d886.png">
@@ -113,9 +130,11 @@ propType: `Color`
   **BLUE_TRANSLUCENT:**
 
 <img width="309" alt="Captura de Tela 2021-05-02 às 19 46 53" src="https://user-images.githubusercontent.com/6011385/116830224-27b06500-ab7f-11eb-89c3-0350320aa6dc.png">
+
+
  
   **NONE:**
-  Custom Design
+  Your Custom Design
 
 ## License
 
