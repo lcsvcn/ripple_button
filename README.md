@@ -112,6 +112,12 @@ This will change the disabled color from the button
 
 propType: `Color`
 
+#### `overlay`
+
+This will change the color on mouse over
+
+propType: `Color`
+
 #### `shadow`
 
 This will change the shadow color from the button
