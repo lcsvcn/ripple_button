@@ -16,20 +16,6 @@ A fully customizable button with material ripple effect. Easy to use having some
 
 ## RippleButton
 
-#### `text`
-
-Change the text from the button
-
-propType: `String`
-
-**REQUIRED!**
-
-#### `onPressed`
-
-Expects a function that will be executed on button press. If null, button will not be clickable. To apply disable design use **isEnabled**
-
-propType: `Function()?`
-
 #### `isEnabled`
 
 This will change the button design and behaviour to show if it is disabled or enabled. 
@@ -38,8 +24,15 @@ If false, this will change background color to `disabled` (see `RippleButtonColo
 
 On activation or deativation it will do a bouncing animation to gain users attention.
 
-
 propType: `bool`
+
+**REQUIRED!**
+
+#### `onPressed`
+
+Expects a function that will be executed on button press. If null, button will not be clickable. To apply disable design use **isEnabled**
+
+propType: `Function()?`
 
 #### `padding`
 
