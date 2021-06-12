@@ -26,8 +26,6 @@ On activation or deativation it will do a bouncing animation to gain users atten
 
 propType: `bool`
 
-**REQUIRED!**
-
 #### `onPressed`
 
 Expects a function that will be executed on button press. If null, button will not be clickable. To apply disable design use **isEnabled**
