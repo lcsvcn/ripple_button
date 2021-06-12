@@ -10,5 +10,7 @@ enum RippleButtonType {
   AMBER,
   WHITE_TRANSLUCENT,
   BLUE_TRANSLUCENT,
+  GREEN,
+  RED,
   NONE,
 }

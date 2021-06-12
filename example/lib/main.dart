@@ -86,6 +86,22 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             RippleButton(
+              "Green Button",
+              type: RippleButtonType.GREEN,
+              padding: EdgeInsets.all(16),
+              onPressed: () {
+                _showFlushbar("Clicked Green Button");
+              },
+            ),
+            RippleButton(
+              "Red Button",
+              type: RippleButtonType.RED,
+              padding: EdgeInsets.all(16),
+              onPressed: () {
+                _showFlushbar("Clicked Red Button");
+              },
+            ),
+            RippleButton(
               isEnabled ? "Disable Custom Button" : "Enable Custom Button",
               padding: EdgeInsets.all(16),
               color: RippleButtonColor(

@@ -9,6 +9,8 @@ part 'package:ripple_button/buttons/yellow.dart';
 part 'package:ripple_button/buttons/amber.dart';
 part 'package:ripple_button/buttons/blue_translucent.dart';
 part 'package:ripple_button/buttons/white_translucent.dart';
+part 'package:ripple_button/buttons/green.dart';
+part 'package:ripple_button/buttons/red.dart';
 
 class CustomRippleButton extends StatefulWidget {
   /// [child] expects a widget to be inside the button

@@ -111,6 +111,26 @@ class RippleButton extends StatelessWidget {
           border: border,
         );
 
+      case RippleButtonType.GREEN:
+        return GreenRippleButton(
+          onPressed: onPressed,
+          isEnabled: isEnabled,
+          text: text,
+          style: style,
+          color: color,
+          border: border,
+        );
+
+      case RippleButtonType.RED:
+        return RedRippleButton(
+          onPressed: onPressed,
+          isEnabled: isEnabled,
+          text: text,
+          style: style,
+          color: color,
+          border: border,
+        );
+
       default:
         return CustomRippleButton(
           child: textWidget,
