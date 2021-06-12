@@ -1,3 +1,6 @@
+## 3.1.0
+* Added two button types: GREEN and RED
+
 ## 3.0.0
 * Change [text] - Change from RippleButton(text: "Title button") to RippleButto("Button Title")
 * Moved old params RippleButtonColor and RippleButtonBorder outside RippleButtonStyle (now it is [color] and [border] respectively)
