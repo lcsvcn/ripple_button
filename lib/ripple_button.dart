@@ -72,23 +72,25 @@ class RippleButton extends StatelessWidget {
 
     switch (type) {
       case RippleButtonType.BLUE_TRANSLUCENT:
-        return BlueTranslucentRippleButton(
+        return TranslucentRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
           style: style,
           color: color,
           border: border,
+          background: Color(0xFF003FA2),
         );
 
       case RippleButtonType.WHITE_TRANSLUCENT:
-        return WhiteTranslucentRippleButton(
+        return TranslucentRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
           style: style,
           color: color,
           border: border,
+          background: Colors.white,
         );
 
       case RippleButtonType.YELLOW:

@@ -23,6 +23,8 @@ class TranslucentRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
+  final Color background;
+
   TranslucentRippleButton({
     required this.onPressed,
     required this.isEnabled,
@@ -30,6 +32,7 @@ class TranslucentRippleButton extends StatelessWidget {
     required this.style,
     required this.color,
     required this.border,
+    required this.background,
   });
 
   @override
@@ -46,7 +49,7 @@ class TranslucentRippleButton extends StatelessWidget {
       border: RippleButtonBorder(
         radius: BorderRadius.circular(30),
         side: BorderSide(
-          color: Color(0xFF003FA2),
+          color: background,
           width: 2,
         ),
       ),
@@ -60,7 +63,7 @@ class TranslucentRippleButton extends StatelessWidget {
         text,
         style: style.text ??
             TextStyle(
-              color: Color(0xFF003FA2),
+              color: background,
               fontSize: 16,
               fontWeight: FontWeight.w900,
             ),

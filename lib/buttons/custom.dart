@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ripple_button/ripple_button.dart';
 import 'package:ripple_button/widget/animated_bouncing.dart';
 
-part 'package:ripple_button/buttons/blue_translucent.dart';
 part 'package:ripple_button/buttons/translucent.dart';
-part 'package:ripple_button/buttons/white_translucent.dart';
 part 'package:ripple_button/buttons/round_corner.dart';
 
 class CustomRippleButton extends StatefulWidget {
