@@ -8,9 +8,11 @@ part of ripple_button;
 enum RippleButtonType {
   YELLOW,
   AMBER,
+  PINK,
   WHITE_TRANSLUCENT,
   BLUE_TRANSLUCENT,
-  GREEN,
-  RED,
+  GREEN_WHATSAPP,
+  RED_GMAIL,
+  BLUE_TELEGRAM,
   NONE,
 }

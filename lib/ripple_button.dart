@@ -92,43 +92,72 @@ class RippleButton extends StatelessWidget {
         );
 
       case RippleButtonType.YELLOW:
-        return YellowRippleButton(
+        return RoundCornerRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
           style: style,
           color: color,
           border: border,
+          background: Color(0xFFFFC800),
         );
 
       case RippleButtonType.AMBER:
-        return AmberRippleButton(
+        return RoundCornerRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
           style: style,
           color: color,
           border: border,
+          background: Color(0xFFFFB300),
         );
 
-      case RippleButtonType.GREEN:
-        return GreenRippleButton(
+      case RippleButtonType.PINK:
+        return RoundCornerRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
           style: style,
           color: color,
           border: border,
+          background: Color(0xFFFF1493),
         );
 
-      case RippleButtonType.RED:
-        return RedRippleButton(
+      // https://brandcolors.net/b/google
+      case RippleButtonType.GREEN_WHATSAPP:
+        return RoundCornerRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
           style: style,
           color: color,
           border: border,
+          background: Color(0xFF25d366),
+        );
+
+      // https://brandcolors.net/b/google
+      case RippleButtonType.RED_GMAIL:
+        return RoundCornerRippleButton(
+          onPressed: onPressed,
+          isEnabled: isEnabled,
+          text: text,
+          style: style,
+          color: color,
+          border: border,
+          background: Color(0xFFEA4335),
+        );
+
+      // https://brandcolors.net/b/telegram
+      case RippleButtonType.BLUE_TELEGRAM:
+        return RoundCornerRippleButton(
+          onPressed: onPressed,
+          isEnabled: isEnabled,
+          text: text,
+          style: style,
+          color: color,
+          border: border,
+          background: Color(0xFF0088CC),
         );
 
       default:

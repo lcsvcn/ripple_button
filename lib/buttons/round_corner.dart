@@ -1,6 +1,6 @@
 part of custom_ripple_button;
 
-class GreenRippleButton extends StatelessWidget {
+class RoundCornerRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function()? onPressed;
 
@@ -23,21 +23,24 @@ class GreenRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
-  GreenRippleButton({
-    required this.onPressed,
-    required this.isEnabled,
-    required this.text,
-    required this.style,
-    required this.color,
-    required this.border,
-  });
+  final Color background;
+
+  RoundCornerRippleButton(
+      {required this.onPressed,
+      required this.isEnabled,
+      required this.text,
+      required this.style,
+      required this.color,
+      required this.border,
+      required this.background,
+      });
 
   @override
   Widget build(BuildContext context) {
     return CustomRippleButton(
       isEnabled: isEnabled,
       color: RippleButtonColor(
-        background: Color(0xFF128C7E),
+        background: background,
         foreground: color.foreground,
         shadow: color.shadow,
         disabled: color.disabled,
@@ -57,7 +60,7 @@ class GreenRippleButton extends StatelessWidget {
         text,
         style: style.text ??
             TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 16,
               fontWeight: FontWeight.w900,
             ),

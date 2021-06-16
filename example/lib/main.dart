@@ -86,19 +86,35 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             RippleButton(
-              "Green Button",
-              type: RippleButtonType.GREEN,
+              "Pink Button",
+              type: RippleButtonType.PINK,
               padding: EdgeInsets.all(16),
               onPressed: () {
-                _showFlushbar("Clicked Green Button");
+                _showFlushbar("Clicked Pink Button");
               },
             ),
             RippleButton(
-              "Red Button",
-              type: RippleButtonType.RED,
+              "Green Whatsapp Button",
+              type: RippleButtonType.GREEN_WHATSAPP,
               padding: EdgeInsets.all(16),
               onPressed: () {
-                _showFlushbar("Clicked Red Button");
+                _showFlushbar("Clicked Green Whatsapp Button");
+              },
+            ),
+            RippleButton(
+              "Red Gmail Button",
+              type: RippleButtonType.RED_GMAIL,
+              padding: EdgeInsets.all(16),
+              onPressed: () {
+                _showFlushbar("Clicked Red Gmail Button");
+              },
+            ),
+            RippleButton(
+              "Blue Telegram Button",
+              type: RippleButtonType.BLUE_TELEGRAM,
+              padding: EdgeInsets.all(16),
+              onPressed: () {
+                _showFlushbar("Clicked Blue Telegram Button");
               },
             ),
             RippleButton(

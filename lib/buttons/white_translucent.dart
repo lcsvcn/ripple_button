@@ -23,6 +23,7 @@ class WhiteTranslucentRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
+
   WhiteTranslucentRippleButton({
     required this.onPressed,
     required this.isEnabled,

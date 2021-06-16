@@ -1,15 +1,15 @@
 part of custom_ripple_button;
 
-class AmberRippleButton extends StatelessWidget {
+class TranslucentRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function()? onPressed;
+
+  /// [text] expects a String that will be show inside the button
+  final String text;
 
   /// [isEnabled] expects a [boolean]
   /// This will enable or disable button
   final bool isEnabled;
-
-  /// [text] expects a String that will be show inside the button
-  final String text;
 
   /// [RippleButtonStyle] expects styles attributes for the ripple button.
   /// Note: Not all styles can be since is a preset button
@@ -23,7 +23,7 @@ class AmberRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
-  AmberRippleButton({
+  TranslucentRippleButton({
     required this.onPressed,
     required this.isEnabled,
     required this.text,
@@ -37,7 +37,7 @@ class AmberRippleButton extends StatelessWidget {
     return CustomRippleButton(
       isEnabled: isEnabled,
       color: RippleButtonColor(
-        background: Color(0xFFFFB300),
+        background: Colors.transparent,
         foreground: color.foreground,
         shadow: color.shadow,
         disabled: color.disabled,
@@ -45,7 +45,10 @@ class AmberRippleButton extends StatelessWidget {
       ),
       border: RippleButtonBorder(
         radius: BorderRadius.circular(30),
-        side: border.side,
+        side: BorderSide(
+          color: Color(0xFF003FA2),
+          width: 2,
+        ),
       ),
       style: RippleButtonStyle(
         width: style.width,
@@ -57,7 +60,7 @@ class AmberRippleButton extends StatelessWidget {
         text,
         style: style.text ??
             TextStyle(
-              color: Colors.black,
+              color: Color(0xFF003FA2),
               fontSize: 16,
               fontWeight: FontWeight.w900,
             ),
