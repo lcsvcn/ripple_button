@@ -25,15 +25,17 @@ class RoundCornerRippleButton extends StatelessWidget {
 
   final Color background;
 
-  RoundCornerRippleButton(
-      {required this.onPressed,
-      required this.isEnabled,
-      required this.text,
-      required this.style,
-      required this.color,
-      required this.border,
-      required this.background,
-      });
+  RoundCornerRippleButton({
+    required this.onPressed,
+    required this.isEnabled,
+    required this.text,
+    required this.style,
+    required this.color,
+    required this.border,
+    required this.background,
+  });
+
+  bool get _isLightColor => ThemeData.estimateBrightnessForColor(background) == Brightness.light;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +62,7 @@ class RoundCornerRippleButton extends StatelessWidget {
         text,
         style: style.text ??
             TextStyle(
-              color: Colors.black,
+              color: _isLightColor ? Colors.black : Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w900,
             ),

@@ -124,8 +124,8 @@ class RippleButton extends StatelessWidget {
           background: Color(0xFFFF1493),
         );
 
-      // https://brandcolors.net/b/google
-      case RippleButtonType.GREEN_WHATSAPP:
+      // https://brandcolors.net/b/whatsapp
+      case RippleButtonType.GREEN_LIGHT_WHATSAPP:
         return RoundCornerRippleButton(
           onPressed: onPressed,
           isEnabled: isEnabled,
@@ -134,6 +134,17 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFF25d366),
+        );
+
+      case RippleButtonType.GREEN_DARK_WHATSAPP:
+        return RoundCornerRippleButton(
+          onPressed: onPressed,
+          isEnabled: isEnabled,
+          text: text,
+          style: style,
+          color: color,
+          border: border,
+          background: Color(0xFF128c7e),
         );
 
       // https://brandcolors.net/b/google
