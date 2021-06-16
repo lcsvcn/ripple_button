@@ -1,3 +1,17 @@
+## 3.2.0
+* Added these button types: 
+- GREEN_LIGHT_WHATSAPP
+- GREEN_DARK_WHATSAPP
+- RED_GMAIL
+- BLUE_TELEGRAM
+- PINK
+
+These types are were renamed:
+- RED -> Use this instead: RED_GMAIL
+- GREEN -> Use this instead: GREEN_DARK_WHATSAPP
+
+Please update these
+
 ## 3.1.0
 * Added two button types: GREEN and RED
 
