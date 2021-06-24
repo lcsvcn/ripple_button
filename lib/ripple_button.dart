@@ -53,18 +53,25 @@ class RippleButton extends StatelessWidget {
   /// [default] value is [RippleButtonBorder())]
   final RippleButtonBorder border;
 
+  /// [heroTag] expects a [String]
+  /// This will add a hero tag to the ripple button
+  /// Use this to configure flutter hero animations
+  /// https://flutter.dev/docs/development/ui/animations/hero-animations
+  final String? heroTag;
+
   RippleButton(
     this.text, {
     this.onPressed,
     this.isEnabled = true,
     this.padding = EdgeInsets.zero,
+    this.heroTag,
     this.type = RippleButtonType.NONE,
     this.style = const RippleButtonStyle(),
     this.color = const RippleButtonColor(),
     this.border = const RippleButtonBorder(),
   });
 
-  _selectButtonType() {
+  _buildButtonFromType() {
     final textWidget = Text(
       text,
       style: style.text,
@@ -189,7 +196,10 @@ class RippleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
-      child: _selectButtonType(),
+      child: Hero(
+        tag: heroTag ?? "",
+        child: _buildButtonFromType(),
+      ),
     );
   }
 }

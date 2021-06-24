@@ -1,3 +1,6 @@
+## 3.2.1
+* Added hero tag
+
 ## 3.2.0
 * Added these button types: 
 - GREEN_LIGHT_WHATSAPP
