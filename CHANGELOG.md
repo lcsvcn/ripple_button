@@ -1,3 +1,6 @@
+## 3.2.2
+* Fixed ofending hero bug
+
 ## 3.2.1
 * Added hero tag
 

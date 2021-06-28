@@ -9,56 +9,6 @@ part 'package:ripple_button/models/ripple_button_color.dart';
 part 'package:ripple_button/models/ripple_button_border.dart';
 
 class RippleButton extends StatelessWidget {
-  /// [text] expects a [String]
-  /// This will change the text inside the button
-  final String text;
-
-  /// [isEnabled] expects a [boolean]
-  /// This will enable or disable button
-  final bool isEnabled;
-
-  /// [onPressed] expects a function that will be executed on button press.
-  final Function()? onPressed;
-
-  /// [padding]  expects a [EdgeInsets]
-  /// This will change the padding of button to other widgets
-  ///
-  ///  [default] value is [EdgeInsets.zero] (no padding)
-  final EdgeInsets padding;
-
-  /// This are pre-config designs for the ripple button
-  /// This is optional, if not set
-  /// The widget will use your design for the button
-  ///  [default] value is [RippleButtonType.none] (set your own custom design)
-  final RippleButtonType type;
-
-  /// [style] expects a [RippleButtonStyle]
-  /// This will change the style from the Ripple Button
-  /// Send values for your custom Ripple Button
-  /// If you send any Ripple Button [type], this may not be used.
-  /// [default] value is [RippleButtonStyle())]
-  final RippleButtonStyle style;
-
-  /// [color] expects a [RippleButtonColor]
-  /// This will change the color from the Ripple Button
-  /// Send values for your custom Ripple Button
-  /// If you send any Ripple Button [type], this may not be used.
-  /// [default] value is [RippleButtonColor())]
-  final RippleButtonColor color;
-
-  /// [color] expects a [RippleButtonBorder]
-  /// This will change the border from the Ripple Button
-  /// Send values for your custom Ripple Button
-  /// If you send any Ripple Button [type], this may not be used.
-  /// [default] value is [RippleButtonBorder())]
-  final RippleButtonBorder border;
-
-  /// [heroTag] expects a [String]
-  /// This will add a hero tag to the ripple button
-  /// Use this to configure flutter hero animations
-  /// https://flutter.dev/docs/development/ui/animations/hero-animations
-  final String? heroTag;
-
   RippleButton(
     this.text, {
     this.onPressed,
@@ -70,6 +20,56 @@ class RippleButton extends StatelessWidget {
     this.color = const RippleButtonColor(),
     this.border = const RippleButtonBorder(),
   });
+
+  /// [onPressed] expects a function that will be executed on button press.
+  final Function()? onPressed;
+
+  /// [color] expects a [RippleButtonBorder]
+  /// This will change the border from the Ripple Button
+  /// Send values for your custom Ripple Button
+  /// If you send any Ripple Button [type], this may not be used.
+  /// [default] value is [RippleButtonBorder())]
+  final RippleButtonBorder border;
+
+  /// [color] expects a [RippleButtonColor]
+  /// This will change the color from the Ripple Button
+  /// Send values for your custom Ripple Button
+  /// If you send any Ripple Button [type], this may not be used.
+  /// [default] value is [RippleButtonColor())]
+  final RippleButtonColor color;
+
+  /// [heroTag] expects a [String]
+  /// This will add a hero tag to the ripple button
+  /// Use this to configure flutter hero animations
+  /// https://flutter.dev/docs/development/ui/animations/hero-animations
+  final String? heroTag;
+
+  /// [isEnabled] expects a [boolean]
+  /// This will enable or disable button
+  final bool isEnabled;
+
+  /// [padding]  expects a [EdgeInsets]
+  /// This will change the padding of button to other widgets
+  ///
+  ///  [default] value is [EdgeInsets.zero] (no padding)
+  final EdgeInsets padding;
+
+  /// [style] expects a [RippleButtonStyle]
+  /// This will change the style from the Ripple Button
+  /// Send values for your custom Ripple Button
+  /// If you send any Ripple Button [type], this may not be used.
+  /// [default] value is [RippleButtonStyle())]
+  final RippleButtonStyle style;
+
+  /// [text] expects a [String]
+  /// This will change the text inside the button
+  final String text;
+
+  /// This are pre-config designs for the ripple button
+  /// This is optional, if not set
+  /// The widget will use your design for the button
+  ///  [default] value is [RippleButtonType.none] (set your own custom design)
+  final RippleButtonType type;
 
   _buildButtonFromType() {
     final textWidget = Text(
@@ -192,12 +192,19 @@ class RippleButton extends StatelessWidget {
     }
   }
 
+  _buildHeroTag({required Widget child}) {
+    if (heroTag == null) return child;
+    return Hero(
+      tag: heroTag!,
+      child: _buildButtonFromType(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
-      child: Hero(
-        tag: heroTag ?? "",
+      child: _buildHeroTag(
         child: _buildButtonFromType(),
       ),
     );
