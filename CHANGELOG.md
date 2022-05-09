@@ -1,4 +1,4 @@
-## 3.2.3
+## 3.2.4
 * Fixed flutter static analysis
 
 ## 3.2.2
