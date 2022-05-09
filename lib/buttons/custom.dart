@@ -1,6 +1,5 @@
 library custom_ripple_button;
 
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:ripple_button/ripple_button.dart';
 import 'package:ripple_button/widget/animated_bouncing.dart';
