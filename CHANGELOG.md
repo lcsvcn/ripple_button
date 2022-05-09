@@ -1,3 +1,6 @@
+## 3.2.3
+* Fixed flutter static analysis
+
 ## 3.2.2
 * Fixed ofending hero bug
 
