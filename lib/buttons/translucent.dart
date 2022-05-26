@@ -25,6 +25,11 @@ class TranslucentRippleButton extends StatelessWidget {
 
   final Color background;
 
+  /// [icon] expects a [Icon]
+  /// This will add to the left of the button text
+  /// Use this to configure any icons that you want in the button
+  final Icon? icon;
+
   TranslucentRippleButton({
     required this.onPressed,
     required this.isEnabled,
@@ -33,6 +38,7 @@ class TranslucentRippleButton extends StatelessWidget {
     required this.color,
     required this.border,
     required this.background,
+    this.icon,
   });
 
   @override
