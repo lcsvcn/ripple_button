@@ -1,7 +1,7 @@
 ## 3.3.0
 * Added [icon] to allow showing an icon inside the button
 
-## 3.2.3
+## 3.2.4
 * Fixed flutter static analysis
 
 ## 3.2.2
