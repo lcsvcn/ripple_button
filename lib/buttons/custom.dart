@@ -33,6 +33,11 @@ class CustomRippleButton extends StatefulWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
+  /// [icon] expects a [Icon]
+  /// This will add to the left of the button text
+  /// Use this to configure any icons that you want in the button
+  final Icon? icon;
+
   CustomRippleButton({
     required this.style,
     required this.isEnabled,
@@ -40,6 +45,7 @@ class CustomRippleButton extends StatefulWidget {
     required this.child,
     required this.color,
     required this.border,
+    this.icon,
   });
 
   @override
@@ -48,49 +54,93 @@ class CustomRippleButton extends StatefulWidget {
 
 class _CustomRippleButtonState extends State<CustomRippleButton>
     with SingleTickerProviderStateMixin {
-  @override
-  Widget build(BuildContext context) {
+  Widget buttonWithoutIcon() {
     final double _width =
         widget.style.width ?? MediaQuery.of(context).size.width;
 
+    return ElevatedButton(
+      onPressed: widget.isEnabled ? widget.onPressed : null,
+      child: widget.child,
+      style: ButtonStyle(
+        minimumSize: MaterialStateProperty.all<Size>(
+          Size(
+            _width,
+            widget.style.height,
+          ),
+        ),
+        elevation: MaterialStateProperty.all<double>(
+          widget.style.elevation,
+        ),
+        backgroundColor: MaterialStateProperty.all<Color>(
+          widget.isEnabled ? widget.color.background : widget.color.disabled,
+        ),
+        foregroundColor: MaterialStateProperty.all<Color>(
+          widget.color.foreground,
+        ),
+        shadowColor: MaterialStateProperty.all<Color>(
+          widget.color.shadow,
+        ),
+        overlayColor: MaterialStateProperty.all<Color>(
+          widget.color.overlay,
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: widget.border.radius,
+            side: widget.border.side,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buttonWithIcon() {
+    final double _width =
+        widget.style.width ?? MediaQuery.of(context).size.width;
+
+    return ElevatedButton.icon(
+      icon: widget.icon!,
+      onPressed: widget.isEnabled ? widget.onPressed : null,
+      label: widget.child,
+      style: ButtonStyle(
+        minimumSize: MaterialStateProperty.all<Size>(
+          Size(
+            _width,
+            widget.style.height,
+          ),
+        ),
+        elevation: MaterialStateProperty.all<double>(
+          widget.style.elevation,
+        ),
+        backgroundColor: MaterialStateProperty.all<Color>(
+          widget.isEnabled ? widget.color.background : widget.color.disabled,
+        ),
+        foregroundColor: MaterialStateProperty.all<Color>(
+          widget.color.foreground,
+        ),
+        shadowColor: MaterialStateProperty.all<Color>(
+          widget.color.shadow,
+        ),
+        overlayColor: MaterialStateProperty.all<Color>(
+          widget.color.overlay,
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: widget.border.radius,
+            side: widget.border.side,
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return AnimatedOpacity(
       opacity: widget.isEnabled ? 1.0 : 0.8,
       duration: Duration(milliseconds: 200),
       child: AnimatedBouncing(
         shouldAnimate: widget.isEnabled,
-        child: ElevatedButton(
-          onPressed: widget.isEnabled ? widget.onPressed : null,
-          child: widget.child,
-          style: ButtonStyle(
-            minimumSize: MaterialStateProperty.all<Size>(Size(
-              _width,
-              widget.style.height,
-            )),
-            elevation: MaterialStateProperty.all<double>(
-              widget.style.elevation,
-            ),
-            backgroundColor: MaterialStateProperty.all<Color>(
-              widget.isEnabled
-                  ? widget.color.background
-                  : widget.color.disabled,
-            ),
-            foregroundColor: MaterialStateProperty.all<Color>(
-              widget.color.foreground,
-            ),
-            shadowColor: MaterialStateProperty.all<Color>(
-              widget.color.shadow,
-            ),
-            overlayColor: MaterialStateProperty.all<Color>(
-              widget.color.overlay,
-            ),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius: widget.border.radius,
-                side: widget.border.side,
-              ),
-            ),
-          ),
-        ),
+        child: (widget.icon == null) ? buttonWithoutIcon() : buttonWithIcon(),
       ),
     );
   }

@@ -23,6 +23,11 @@ class RoundCornerRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
+  /// [icon] expects a [Icon]
+  /// This will add to the left of the button text
+  /// Use this to configure any icons that you want in the button
+  final Icon? icon;
+
   final Color background;
 
   RoundCornerRippleButton({
@@ -33,6 +38,7 @@ class RoundCornerRippleButton extends StatelessWidget {
     required this.color,
     required this.border,
     required this.background,
+    this.icon,
   });
 
   bool get _isLightColor =>
@@ -42,6 +48,7 @@ class RoundCornerRippleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomRippleButton(
       isEnabled: isEnabled,
+      icon: icon,
       color: RippleButtonColor(
         background: background,
         foreground: color.foreground,
