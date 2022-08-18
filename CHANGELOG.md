@@ -1,3 +1,7 @@
+## 3.4.0
+* Changed [child] to [text]
+* Changed [icon] type to support ImageIcon
+
 ## 3.3.0
 * Added [icon] to allow showing an icon inside the button
 
