@@ -68,15 +68,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Blue Translucent Button",
                 padding: EdgeInsets.all(16),
                 type: RippleButtonType.BLUE_TRANSLUCENT,
-                onPressed: () =>
-                    {_showFlushbar("Clicked Blue Translucent Button")},
+                onPressed: () => {_showFlushbar("Clicked Blue Translucent Button")},
               ),
               RippleButton(
                 "White Translucent Button",
                 padding: EdgeInsets.all(16),
                 type: RippleButtonType.WHITE_TRANSLUCENT,
-                onPressed: () =>
-                    {_showFlushbar("Clicked White Translucent Button")},
+                icon: Icon(
+                  Icons.abc,
+                  color: Colors.white,
+                ),
+                onPressed: () => {_showFlushbar("Clicked White Translucent Button")},
               ),
               RippleButton(
                 "Amber Button",
@@ -149,8 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onPressed: () {
                   setState(() => {isEnabled = !isEnabled});
-                  _showFlushbar(
-                      isEnabled ? "Enabled Button" : "Disabled Button");
+                  _showFlushbar(isEnabled ? "Enabled Button" : "Disabled Button");
                 },
               ),
               RippleButton(

@@ -19,6 +19,7 @@ class RippleButton extends StatelessWidget {
     this.style = const RippleButtonStyle(),
     this.color = const RippleButtonColor(),
     this.border = const RippleButtonBorder(),
+    this.icon,
   });
 
   /// [onPressed] expects a function that will be executed on button press.
@@ -71,6 +72,10 @@ class RippleButton extends StatelessWidget {
   ///  [default] value is [RippleButtonType.none] (set your own custom design)
   final RippleButtonType type;
 
+  /// [Icon] expects an icon to show before the button text.
+  /// Optional, if not provided, only shows text
+  final Icon? icon;
+
   _buildButtonFromType() {
     final textWidget = Text(
       text,
@@ -87,6 +92,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFF003FA2),
+          icon: icon,
         );
 
       case RippleButtonType.WHITE_TRANSLUCENT:
@@ -98,6 +104,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Colors.white,
+          icon: icon,
         );
 
       case RippleButtonType.YELLOW:
@@ -109,6 +116,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFFFFC800),
+          icon: icon,
         );
 
       case RippleButtonType.AMBER:
@@ -120,6 +128,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFFFFB300),
+          icon: icon,
         );
 
       case RippleButtonType.PINK:
@@ -131,6 +140,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFFFF1493),
+          icon: icon,
         );
 
       // https://brandcolors.net/b/whatsapp
@@ -143,6 +153,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFF25d366),
+          icon: icon,
         );
 
       case RippleButtonType.GREEN_DARK_WHATSAPP:
@@ -154,6 +165,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFF128c7e),
+          icon: icon,
         );
 
       // https://brandcolors.net/b/google
@@ -166,6 +178,7 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFFEA4335),
+          icon: icon,
         );
 
       // https://brandcolors.net/b/telegram
@@ -178,16 +191,18 @@ class RippleButton extends StatelessWidget {
           color: color,
           border: border,
           background: Color(0xFF0088CC),
+          icon: icon,
         );
 
       default:
         return CustomRippleButton(
-          child: textWidget,
+          text: textWidget,
           onPressed: onPressed,
           isEnabled: isEnabled,
           style: style,
           color: color,
           border: border,
+          icon: icon,
         );
     }
   }

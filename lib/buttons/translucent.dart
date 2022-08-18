@@ -25,6 +25,10 @@ class TranslucentRippleButton extends StatelessWidget {
 
   final Color background;
 
+  /// [Icon] expects an icon to show before the button text.
+  /// Optional, if not provided, only shows text
+  final Icon? icon;
+
   TranslucentRippleButton({
     required this.onPressed,
     required this.isEnabled,
@@ -33,6 +37,7 @@ class TranslucentRippleButton extends StatelessWidget {
     required this.color,
     required this.border,
     required this.background,
+    this.icon,
   });
 
   @override
@@ -59,7 +64,7 @@ class TranslucentRippleButton extends StatelessWidget {
         elevation: style.elevation,
       ),
       onPressed: onPressed,
-      child: Text(
+      text: Text(
         text,
         style: style.text ??
             TextStyle(
@@ -68,6 +73,7 @@ class TranslucentRippleButton extends StatelessWidget {
               fontWeight: FontWeight.w900,
             ),
       ),
+      icon: icon,
     );
   }
 }

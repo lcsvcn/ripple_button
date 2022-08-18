@@ -23,6 +23,10 @@ class RoundCornerRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
+  /// [Icon] expects an icon to show before the button text.
+  /// Optional, if not provided, only shows text
+  final Icon? icon;
+
   final Color background;
 
   RoundCornerRippleButton({
@@ -33,10 +37,10 @@ class RoundCornerRippleButton extends StatelessWidget {
     required this.color,
     required this.border,
     required this.background,
+    this.icon,
   });
 
-  bool get _isLightColor =>
-      ThemeData.estimateBrightnessForColor(background) == Brightness.light;
+  bool get _isLightColor => ThemeData.estimateBrightnessForColor(background) == Brightness.light;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +63,7 @@ class RoundCornerRippleButton extends StatelessWidget {
         elevation: style.elevation,
       ),
       onPressed: onPressed,
-      child: Text(
+      text: Text(
         text,
         style: style.text ??
             TextStyle(
@@ -68,6 +72,7 @@ class RoundCornerRippleButton extends StatelessWidget {
               fontWeight: FontWeight.w900,
             ),
       ),
+      icon: icon,
     );
   }
 }
