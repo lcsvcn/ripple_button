@@ -15,7 +15,6 @@ class RippleButton extends StatelessWidget {
     this.isEnabled = true,
     this.padding = EdgeInsets.zero,
     this.heroTag,
-    this.icon,
     this.type = RippleButtonType.NONE,
     this.style = const RippleButtonStyle(),
     this.color = const RippleButtonColor(),
@@ -45,11 +44,6 @@ class RippleButton extends StatelessWidget {
   /// Use this to configure flutter hero animations
   /// https://flutter.dev/docs/development/ui/animations/hero-animations
   final String? heroTag;
-
-  /// [icon] expects a [Icon]
-  /// This will add to the left of the button text
-  /// Use this to configure any icons that you want in the button
-  final Icon? icon;
 
   /// [isEnabled] expects a [boolean]
   /// This will enable or disable button
@@ -89,7 +83,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -102,7 +95,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -115,7 +107,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -128,7 +119,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -141,7 +131,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -155,7 +144,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -168,7 +156,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -182,7 +169,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
@@ -196,7 +182,6 @@ class RippleButton extends StatelessWidget {
           onPressed: onPressed,
           isEnabled: isEnabled,
           text: text,
-          icon: icon,
           style: style,
           color: color,
           border: border,
