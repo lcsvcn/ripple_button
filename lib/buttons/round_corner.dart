@@ -46,6 +46,7 @@ class RoundCornerRippleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomRippleButton(
       isEnabled: isEnabled,
+      icon: icon,
       color: RippleButtonColor(
         background: background,
         foreground: color.foreground,

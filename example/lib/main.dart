@@ -98,6 +98,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RippleButton(
                 "Green Light Whatsapp Button",
+                icon: Icon(
+                  Icons.whatsapp,
+                  color: Colors.black,
+                ),
                 type: RippleButtonType.GREEN_LIGHT_WHATSAPP,
                 padding: EdgeInsets.all(16),
                 onPressed: () {
@@ -106,6 +110,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RippleButton(
                 "Green Dark Whatsapp Button",
+                icon: Icon(
+                  Icons.whatsapp,
+                  color: Colors.white,
+                ),
                 type: RippleButtonType.GREEN_DARK_WHATSAPP,
                 padding: EdgeInsets.all(16),
                 onPressed: () {
@@ -114,6 +122,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RippleButton(
                 "Red Gmail Button",
+                icon: Icon(
+                  Icons.email,
+                  color: Colors.white,
+                ),
                 type: RippleButtonType.RED_GMAIL,
                 padding: EdgeInsets.all(16),
                 onPressed: () {
@@ -122,6 +134,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RippleButton(
                 "Blue Telegram Button",
+                icon: Icon(
+                  Icons.telegram,
+                  color: Colors.white,
+                ),
                 type: RippleButtonType.BLUE_TELEGRAM,
                 padding: EdgeInsets.all(16),
                 onPressed: () {
