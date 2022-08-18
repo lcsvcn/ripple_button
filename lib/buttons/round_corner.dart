@@ -40,7 +40,8 @@ class RoundCornerRippleButton extends StatelessWidget {
     this.icon,
   });
 
-  bool get _isLightColor => ThemeData.estimateBrightnessForColor(background) == Brightness.light;
+  bool get _isLightColor =>
+      ThemeData.estimateBrightnessForColor(background) == Brightness.light;
 
   @override
   Widget build(BuildContext context) {

@@ -51,9 +51,11 @@ class CustomRippleButton extends StatefulWidget {
   _CustomRippleButtonState createState() => _CustomRippleButtonState();
 }
 
-class _CustomRippleButtonState extends State<CustomRippleButton> with SingleTickerProviderStateMixin {
+class _CustomRippleButtonState extends State<CustomRippleButton>
+    with SingleTickerProviderStateMixin {
   Widget _buildTextButton() {
-    final double _width = widget.style.width ?? MediaQuery.of(context).size.width;
+    final double _width =
+        widget.style.width ?? MediaQuery.of(context).size.width;
 
     return ElevatedButton(
       onPressed: widget.isEnabled ? widget.onPressed : null,
@@ -89,7 +91,8 @@ class _CustomRippleButtonState extends State<CustomRippleButton> with SingleTick
   }
 
   Widget _buildIconButton() {
-    final double _width = widget.style.width ?? MediaQuery.of(context).size.width;
+    final double _width =
+        widget.style.width ?? MediaQuery.of(context).size.width;
 
     return ElevatedButton.icon(
       onPressed: widget.isEnabled ? widget.onPressed : null,
