@@ -23,9 +23,9 @@ class RoundCornerRippleButton extends StatelessWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
-  /// [Icon] expects an icon to show before the button text.
+  /// [Widget] expects an icon or image icon to show before the button text.
   /// Optional, if not provided, only shows text
-  final Icon? icon;
+  final Widget? icon;
 
   final Color background;
 

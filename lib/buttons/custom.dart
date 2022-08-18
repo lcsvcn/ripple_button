@@ -8,9 +8,6 @@ part 'package:ripple_button/buttons/translucent.dart';
 part 'package:ripple_button/buttons/round_corner.dart';
 
 class CustomRippleButton extends StatefulWidget {
-  /// [text] expects a widget to be inside the button
-  final Text text;
-
   /// [onPressed] expects a function that will be executed on button press.
   /// if value is [null] it will not be clickable,
   /// but disabled design will not be applied.
@@ -33,9 +30,12 @@ class CustomRippleButton extends StatefulWidget {
   /// Note: Not all colors can be since is a preset button
   final RippleButtonBorder border;
 
-  /// [Icon] expects an icon to show before the button text.
+  /// [text] expects a widget to be inside the button
+  final Text text;
+
+  /// [Widget] expects an icon or image icon to show before the button text.
   /// Optional, if not provided, only shows text
-  final Icon? icon;
+  final Widget? icon;
 
   CustomRippleButton({
     required this.style,

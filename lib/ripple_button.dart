@@ -62,19 +62,19 @@ class RippleButton extends StatelessWidget {
   /// [default] value is [RippleButtonStyle())]
   final RippleButtonStyle style;
 
-  /// [text] expects a [String]
-  /// This will change the text inside the button
-  final String text;
-
   /// This are pre-config designs for the ripple button
   /// This is optional, if not set
   /// The widget will use your design for the button
   ///  [default] value is [RippleButtonType.none] (set your own custom design)
   final RippleButtonType type;
 
-  /// [Icon] expects an icon to show before the button text.
+  /// [text] expects a [String]
+  /// This will change the text inside the button
+  final String text;
+
+  /// [Widget] expects an icon or image icon to show before the button text.
   /// Optional, if not provided, only shows text
-  final Icon? icon;
+  final Widget? icon;
 
   _buildButtonFromType() {
     switch (type) {

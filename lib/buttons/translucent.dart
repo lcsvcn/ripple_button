@@ -4,9 +4,6 @@ class TranslucentRippleButton extends StatelessWidget {
   /// [onPressed] expects a function that will be executed on button press.
   final Function()? onPressed;
 
-  /// [text] expects a String that will be show inside the button
-  final String text;
-
   /// [isEnabled] expects a [boolean]
   /// This will enable or disable button
   final bool isEnabled;
@@ -25,9 +22,12 @@ class TranslucentRippleButton extends StatelessWidget {
 
   final Color background;
 
-  /// [Icon] expects an icon to show before the button text.
+  /// [text] expects a String that will be show inside the button
+  final String text;
+
+  /// [Widget] expects an icon or image icon to show before the button text.
   /// Optional, if not provided, only shows text
-  final Icon? icon;
+  final Widget? icon;
 
   TranslucentRippleButton({
     required this.onPressed,
