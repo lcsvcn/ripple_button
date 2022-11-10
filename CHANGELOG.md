@@ -1,3 +1,6 @@
+## 3.4.1
+- Fix analysis
+
 ## 3.4.0
 * Changed [child] to [text]
 * Changed [icon] type to support ImageIcon
